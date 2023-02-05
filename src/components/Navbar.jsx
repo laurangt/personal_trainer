@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 function Navbar() {
   return (
-    <nav className='flex items-center p-5 bg-footer-blue justify-between'>
+    <nav style={{backgroundColor: window.location.pathname === '/' ? 'black' : '#162E3B'}} className='flex items-center p-5 justify-between'>
       <img src='logo192.png' alt='' className='h-8 w-8 flex-none'/>
       <div className='text-white text-xl pr-16'>
         <NavLink to="/" className='p-10'>Home</NavLink>

@@ -5,6 +5,7 @@ import LandingPage from '../components/home/LandingPage';
 import Intro from '../components/home/Intro';
 import trainerKettlebell from '../images/trainer-kettlebell.jpg'
 import introFood from '../images/intro-food.jpg'
+
 function Home() {
   return (
     <div>
