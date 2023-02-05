@@ -1,11 +1,14 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faInstagram, faTiktok } from '@fortawesome/free-brands-svg-icons'
 
 function Footer() {
   return (
-    <div className='bottom-0 fixed w-screen flex p-5 h-20 mt-auto bg-footer-blue text-white'>
-      <div className='flex items-center'>
-        <a href="#">instagram</a>
-        <a href="#">tiktok</a>
+    // make non sticky but rights still seeable
+    <div className='bottom-0 sticky w-screen flex p-5 h-20 mt-auto bg-footer-blue text-white'>
+      <div className='flex items-center m-auto'>
+        <a className="pl-3 pr-3 text-3xl" href="https://www.instagram.com/nevski.fit/"><FontAwesomeIcon icon={faInstagram} /></a>
+        <a className="pl-3 pr-3 text-3xl" href="https://www.tiktok.com/@nevskifit"><FontAwesomeIcon icon={faTiktok} /></a>
       </div>
       <p className='absolute bottom-0 right-0' >© 2022 by Sven Nguyen-Trong. All rights reserved.</p>
     </div>
