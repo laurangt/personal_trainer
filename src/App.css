@@ -5,3 +5,19 @@
 *{
   font-family: 'roboto';
 }
+
+p{
+  line-height: 2rem
+}
+
+h2{
+  letter-spacing: 0.1em;
+}
+
+#fruitvegimg{
+  height: 30rem;
+}
+
+#healthycookingimg{
+  height: 35rem;
+}
