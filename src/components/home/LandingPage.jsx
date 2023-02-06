@@ -8,8 +8,8 @@ function LandingPage() {
       <h1 className='text-6xl w-4/6 mb-20'>Your online personal trainer, whenever and wherever you are.</h1>
       <h2 className='text-3xl	mb-5'>Are you ready to start your fitness journey?</h2>
       <div className='flex w-3/5'>
-        <Button text="Coaching" />
-        <Button text="Programmes" />
+        <a href="#1on1coaching"><Button text="Coaching" /></a>
+        <a href="#programmes"><Button text="Programmes" /></a>
       </div>
     </div>
   )

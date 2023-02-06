@@ -25,6 +25,8 @@ function Home() {
           title="Nutrition"
           text="Fitness is a combination of training and nutrition. Both deserve your attention on your self improvement journey. Although this can be a complexe topic the basics are really simple and if you're honest with yourself most of the time you know what you should and shouldn't eat. I'll make nutrition the easiest part for you but if you still want to have a more detailed look into it click here."
         />
+        <div id="1on1coaching"></div>
+        <div id="programmes"></div>
       <Footer />
     </div>
   );
