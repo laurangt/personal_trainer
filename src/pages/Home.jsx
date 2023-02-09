@@ -28,14 +28,16 @@ function Home() {
           title="Nutrition"
           text="Fitness is a combination of training and nutrition. Both deserve your attention on your self improvement journey. Although this can be a complexe topic the basics are really simple and if you're honest with yourself most of the time you know what you should and shouldn't eat. I'll make nutrition the easiest part for you but if you still want to have a more detailed look into it click here."
         />
-        <div id="1on1coaching" className='ml-40 mr-40 mt-14 mb-20'>
+        <div id="1on1coaching" className='mt-14 mb-20 bg-coaching-blue w-full'>
           <Coaching />
         </div>
         <div id="programmes" className='ml-40 mr-40 mt-14 mb-20'>
-          <h2>PROGRAMMES</h2>
-          <Programme extra="Bodyweight and band workouts only"/>
-          <Programme />
-          <Programme />
+          <h2 className='text-center mb-10'>PROGRAMMES</h2>
+          <div className='flex justify-center'>
+            <Programme extra="Bodyweight and band workouts only"/>
+            <Programme />
+            <Programme />
+          </div>
         </div>
         <div className='ml-40 mr-40 mt-14 mb-20'>
           <h2 className='mb-10 mx-40 text-center'>FREQUENTLY ASKED QUESTIONS</h2>
