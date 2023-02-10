@@ -8,7 +8,7 @@ import introFood from '../images/intro-food.jpg'
 import Coaching from '../components/home/Coaching'
 import Programme from '../components/home/Programme'
 import FAQ from '../components/home/FAQ'
-
+import BeginnerProgramme from '../components/home/BeginnerProgramme';
 function Home() {
   return (
     <div>
@@ -28,19 +28,22 @@ function Home() {
           title="Nutrition"
           text="Fitness is a combination of training and nutrition. Both deserve your attention on your self improvement journey. Although this can be a complexe topic the basics are really simple and if you're honest with yourself most of the time you know what you should and shouldn't eat. I'll make nutrition the easiest part for you but if you still want to have a more detailed look into it click here."
         />
-        <div id="1on1coaching" className='mt-14 mb-20 w-full bg-coaching-blue'>
+        <div id="1on1coaching" className='w-full bg-coaching-blue'>
           <Coaching />
         </div>
-        <div id="programmes" className='ml-40 mr-40 mt-14 mb-20'>
-          <h2 className='text-center mb-10'>PROGRAMMES</h2>
+        <div id="programmes" className='mt-20'>
+          <h2 className='text-center text-2xl mb-10'>PROGRAMMES</h2>
+          <div className='flex justify-center mb-20'>
+            <BeginnerProgramme title="BEGINNER PROGRAMME" />
+          </div>
           <div className='flex justify-center'>
-            <Programme extra="Bodyweight and band workouts only"/>
-            <Programme />
-            <Programme />
+            <Programme title="HOMEWORKOUT" extra="Bodyweight and band workouts only" />
+            <Programme title="programme2" position="mid"/>
+            <Programme title="programme3" />
           </div>
         </div>
-        <div className='ml-40 mr-40 mt-14 mb-20'>
-          <h2 className='mb-10 mx-40 text-center'>FREQUENTLY ASKED QUESTIONS</h2>
+        <div className='mx-40 my-20'>
+          <h2 className='mb-10 mx-40 text-2xl text-center'>FREQUENTLY ASKED QUESTIONS</h2>
           <FAQ
             question="I struggle to be consistent with my training and nutrition, what can I do?"
             answer="Consistency is key to get results and maintain them long term. The most important thing in order to be consistent is to enjoy what you do. Forcing yourself to eat or do things you don't like will not cut it. I will help you find your own way to reach your goals while enjoying what you do."
