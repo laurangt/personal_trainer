@@ -6,9 +6,9 @@ function Programme(props) {
     backgroundColor: props.position === 'mid' ? '#162E3B' : "#334659"
 }
   return (
-    <div style={styles} className='text-white w-1/3 h-96 px-32 py-16'>
+    <div style={styles} className='text-white w-1/3 px-32 py-16'>
       <h2 className='text-center text-xl font-bold mb-16'>{props.title}</h2>
-      <ul className='list-disc'>
+      <ul className='list-disc h-1/2'>
         <li>1 month training plan</li>
         <li>Videos for demonstration</li>
         {props.extra && <li>{props.extra}</li>}

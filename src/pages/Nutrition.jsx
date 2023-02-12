@@ -8,7 +8,7 @@ function Nutrition() {
   return (
     <div>
       <Navbar />
-      <div className='ml-40 mr-40 mt-14 mb-20 text-justify'>
+      <div className='mx-10 lg:mx-40 mt-14 mb-20 text-justify text-lg'>
         <h2 className='text-2xl text-center mb-10 font-bold'>Nutrition</h2>
         <p className='mb-5'>The power of nutrition is truly underestimated. The impact it can have on our body, on our physical as well as on our mental health, is immense and backed by an infinite amount of scientific research. Yet, are you doing anything to change it for the better?<br></br><br></br>To be fair, the modern lifestyle doesn't play in our favour here. In a world where everything has to be quick and easy, we have an abundance of fast food possibilities around the corner. The sad reality is, food loaded with sugar and unhealthy fats have become so normal in today's society, that we almost feel guilty when we eat actual organic food.</p>
         <div className='flex mb-4'>

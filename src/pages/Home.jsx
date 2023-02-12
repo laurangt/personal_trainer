@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
+
 import Footer from '../components/Footer';
 import LandingPage from '../components/home/LandingPage';
 import Intro from '../components/home/Intro';
@@ -8,13 +9,18 @@ import introFood from '../images/intro-food.jpg'
 import Coaching from '../components/home/Coaching'
 import Programme from '../components/home/Programme'
 import FAQ from '../components/home/FAQ'
+import Contact from '../components/home/Contact'
 import BeginnerProgramme from '../components/home/BeginnerProgramme';
+
 function Home() {
   return (
     <div>
-      <Navbar />
+      <div className='relative'>
+        <div className='fixed right-0'><Navbar /></div>
         <LandingPage />
+      </div>
         <Intro
+          location="left"
           img={trainerKettlebell}
           description="Trainer with kettlebells"
           title="Online Personal Training"
@@ -28,18 +34,18 @@ function Home() {
           title="Nutrition"
           text="Fitness is a combination of training and nutrition. Both deserve your attention on your self improvement journey. Although this can be a complexe topic the basics are really simple and if you're honest with yourself most of the time you know what you should and shouldn't eat. I'll make nutrition the easiest part for you but if you still want to have a more detailed look into it click here."
         />
-        <div id="1on1coaching" className='w-full bg-coaching-blue'>
+        <div id="1on1coaching" className='bg-coaching-blue'>
           <Coaching />
         </div>
-        <div id="programmes" className='mt-20'>
-          <h2 className='text-center text-2xl mb-10'>PROGRAMMES</h2>
+        <div id="programs" className='pt-16'>
+          <h2 className='text-center text-2xl mb-10'>PROGRAMS</h2>
           <div className='flex justify-center mb-20'>
-            <BeginnerProgramme title="BEGINNER PROGRAMME" />
+            <BeginnerProgramme title="BEGINNER PROGRAM" />
           </div>
           <div className='flex justify-center'>
             <Programme title="HOMEWORKOUT" extra="Bodyweight and band workouts only" />
-            <Programme title="programme2" position="mid"/>
-            <Programme title="programme3" />
+            <Programme title="program 2" position="mid"/>
+            <Programme title="program 3" />
           </div>
         </div>
         <div className='mx-40 my-20'>
@@ -57,6 +63,9 @@ function Home() {
           <FAQ question="What happens on the first meeting?"
             answer="The first meeting is a chance to get to know each other. We will discuss your goals, your current daily routine, your eating habits, your activity level, possible physical limitations, etc. Everything we need in order to work most effectively."
           />
+        </div>
+        <div id="contact">
+          <Contact />
         </div>
       <Footer />
     </div>

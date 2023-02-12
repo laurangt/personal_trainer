@@ -5,13 +5,13 @@ function BeginnerProgramme(props) {
   const beginnerPrice = 95;
 
   return (
-    <div className='text-white w-1/3 h-96 px-32 py-16 bg-programme-blue relative'>
+    <div className='text-white w-1/3 px-32 pt-16 bg-programme-blue relative'>
       <h2 className='text-center text-xl font-bold mb-16'>{props.title}</h2>
       <div className='flex justify-between font-bold text-xl'>
-        <p>FOR 6 MONTHS</p>
+        <p className='mb-5'>FOR 6 MONTHS</p>
         <p>{beginnerPrice}€</p>
       </div>
-      <ul className='list-disc'>
+      <ul className='list-disc mb-20'>
         <li>Training Plan (from beginner to advanced)</li>
         <li>Videos for demonstration</li>
       </ul>
