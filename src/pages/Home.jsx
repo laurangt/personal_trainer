@@ -12,11 +12,14 @@ import FAQ from '../components/home/FAQ'
 import Contact from '../components/home/Contact'
 import BeginnerProgramme from '../components/home/BeginnerProgramme';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCircleUp } from '@fortawesome/free-solid-svg-icons'
+
 function Home() {
   return (
     <div>
-      <div className='relative'>
-        <div className='fixed right-0'><Navbar /></div>
+      <div className='relative' id="topOfHome">
+        <div className='absolute right-0'><Navbar /></div>
         <LandingPage />
       </div>
         <Intro
@@ -67,6 +70,7 @@ function Home() {
         <div id="contact">
           <Contact />
         </div>
+      <a href="#topOfHome" className='fixed right-10 bottom-24 text-yellow'><FontAwesomeIcon icon={faCircleUp} /></a>
       <Footer />
     </div>
   );
