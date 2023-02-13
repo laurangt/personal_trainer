@@ -4,14 +4,14 @@ import BookButton from './BookButton'
 function Coaching() {
   const coachingPrice = 120
   return (
-    <div className='text-white mx-auto py-16 w-full lg:w-2/5 bg-coaching-blue border-x-4 border-r-white'>
-      <div className='w-1/2 m-auto'>
+    <div className='text-white lg:mx-auto py-10 lg:py-16 w-full xl:w-2/5 bg-coaching-blue lg:border-x-4 lg:border-r-white'>
+      <div className='md:w-1/2 m-auto px-10 lg:px-0'>
         <h2 className='text-center font-bold text-2xl mb-16'>1-1 ONLINE COACHING</h2>
         <div className='flex justify-between font-bold text-xl'>
           <p>FOR 1 MONTH</p>
           <p>{coachingPrice}€</p>
         </div>
-        <ul className='leading-10'>
+        <ul className='leading-10 mb-10'>
           <li>Anamnesis</li>
           <li>Personalised Training Plan</li>
           <li>Videos for demonstration</li>

@@ -5,8 +5,7 @@ import { HashLink as Link } from 'react-router-hash-link';
 function Navbar() {
   return (
     <nav style={{backgroundColor: window.location.pathname === '/' ? 'transparent' : '#162E3B'}} className='flex items-center py-5 px-10 lg:px-40 justify-end'>
-      {/* <img src='logo192.png' alt='' className='h-8 w-8 flex-none'/> */}
-      <div className={'text-xl text-white'}>
+      <div className='text-xl text-white'>
         <NavLink to="/" className='pl-10'>Home</NavLink>
         <Link to="/#1on1coaching" className='pl-10'>Coaching</Link>
         <Link to="/#programs" className='pl-10'>Programs</Link>
