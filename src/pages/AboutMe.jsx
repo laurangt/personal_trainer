@@ -10,7 +10,7 @@ function AboutMe() {
       <Navbar />
       <div className='mx-10 lg:mx-40 mt-7 lg:mt-14 mb-20 text-justify text-lg'>
         <h2 className='text-2xl text-center mb-7 lg:mb-10 font-bold'>About me</h2>
-        <div className='flex flex-col lg:flex-row items-end'>
+        <div className='flex flex-col lg:flex-row items-start'>
           <p className='lg:w-1/2'>If you're here, that means you want to know more about me. First I want to thank you for showing your interest, I am glad to share my story with you.<br></br>As you probably know my name is Sven and I was born and raised in the small country of Luxembourg. Growing up here, I had the privilege to learn 3 languages (French, German and English) in addition to my mother tongue (Luxembourgish). I've always had a passion for sports, especially football in my early years (which little boy didn't?). In my family I was the only person who really was into sports that much. I just had to go out and move, play football if I could, or anything else. I struggled to find any interest in an other subject to be honest and sometimes I felt like nobody would understand me. From the beginning it was clear, I had to do something sports related in the future. In school they don't push you towards the sports industry. It's a secondary thing, but for me it was the only thing I felt good at so I knew I had to figure it all out by myself but I had absolutely no idea what to do and how. However, I wasn't going to settle for something I don't like.</p>
           <img className="lg:w-1/2 lg:ml-10 mt-10 lg:mt-0 object-cover" src={svenPT} alt="trainer profile pic" />
         </div>
