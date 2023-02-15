@@ -28,22 +28,22 @@ function Navbar() {
         {open ? (
           <ul className="text-white divide-y">
             <li>
-              <NavLink to="/" className='text-lg'>Home</NavLink>
+              <NavLink to="/">Home</NavLink>
             </li>
             <li>
-              <Link to="/#1on1coaching" className='text-lg'>Coaching</Link>
+              <Link to="/#1on1coaching">Coaching</Link>
             </li>
             <li>
-            <Link to="/#programs" className='text-lg'>Programs</Link>
+            <Link to="/#programs">Programs</Link>
             </li>
             <li>
-              <NavLink to="/nutrition" className='text-lg'>Nutrition</NavLink>
+              <NavLink to="/nutrition">Nutrition</NavLink>
             </li>
             <li>
-              <NavLink to="/aboutme" className='text-lg'>About me</NavLink>
+              <NavLink to="/aboutme">About me</NavLink>
             </li>
             <li>
-            <Link to="/#contact" className='text-lg'>Contact me</Link>
+            <Link to="/#contact">Contact me</Link>
             </li>
           </ul>
         ) : null}
@@ -79,7 +79,7 @@ const useMediaQuery = (width) => {
 const isBreakpoint = useMediaQuery(768)
 
 return (
-    <nav style={{backgroundColor: window.location.pathname === '/' ? 'transparent' : '#162E3B'}} className='flex items-center py-5 px-10 lg:px-40 justify-end' >
+    <nav style={{backgroundColor: window.location.pathname === '/' ? 'transparent' : '#162E3B'}} className='flex items-center py-5 px-10 xl:px-40 justify-end' >
        <div>{isBreakpoint ? toggleNav : fullNav}</div>
     </nav>
   )
