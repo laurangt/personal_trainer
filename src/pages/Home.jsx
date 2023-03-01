@@ -15,6 +15,9 @@ import BeginnerProgramme from '../components/home/BeginnerProgramme';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleUp } from '@fortawesome/free-solid-svg-icons'
 
+import data from '../data'
+
+
 function Home() {
   return (
     <div>
@@ -37,17 +40,19 @@ function Home() {
         text="Fitness is a combination of training and nutrition. Both deserve your attention on your self improvement journey. Although this can be a complex topic the basics are really simple and if you're honest with yourself most of the time you know what you should and shouldn't eat. I'll make nutrition the easiest part for you but if you still want to have a more detailed look into it click here."
       />
         <div id="1on1coaching" className='bg-coaching-blue'>
-          <Coaching />
+          {<Coaching onlineCoaching={data.onlineCoaching}/>}
         </div>
         <div id="programs" className='pt-10'>
           <h2 className='text-center text-2xl mb-10'>PROGRAMS</h2>
           <div className='flex justify-center mb-20'>
-            <BeginnerProgramme title="BEGINNER PROGRAM" />
+            {<BeginnerProgramme beginnerProgram={data.beginnerProgram}/>}
           </div>
           <div className='flex flex-col lg:flex-row justify-center'>
-            <Programme title="HOMEWORKOUT" extra="Bodyweight and band workouts only" />
-            <Programme title="program 2" position="mid"/>
-            <Programme title="program 3" />
+          {data.programs.map(program => {
+            return (
+              <Programme key={program.slug} program={program}/>
+            )
+          })}
           </div>
         </div>
         <div className='lg:m-auto mx-10 py-10 lg:py-16 lg:w-2/3'>
