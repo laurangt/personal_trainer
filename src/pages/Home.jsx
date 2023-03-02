@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import Navbar from '../components/Navbar';
 
 import Footer from '../components/Footer';
@@ -15,25 +15,8 @@ import BeginnerProgramme from '../components/home/BeginnerProgramme';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleUp } from '@fortawesome/free-solid-svg-icons'
 
-// import data from '../data'
-import axios from 'axios'
 
 function Home() {
-  const API_URL = "http://localhost:3000/api/v1/programmes"
-  function getAPIData(){
-    return axios.get(API_URL).then((response) => response.data)
-  }
-  const [programmes, setProgrammes] = useState([])
-  useEffect(() => {
-    let mounted = true
-    getAPIData().then((items) => {
-      if (mounted){
-        setProgrammes(items)
-      }
-    })
-    return () => {mounted = false}
-  }, [])
-
   return (
     <div>
       <div className='relative' id="topOfHome">
@@ -55,19 +38,15 @@ function Home() {
         text="Fitness is a combination of training and nutrition. Both deserve your attention on your self improvement journey. Although this can be a complex topic the basics are really simple and if you're honest with yourself most of the time you know what you should and shouldn't eat. I'll make nutrition the easiest part for you but if you still want to have a more detailed look into it click here."
       />
         <div id="1on1coaching" className='bg-coaching-blue'>
-          {/* {<Coaching onlineCoaching={programmes.onlineCoaching}/>} */}
+          {<Coaching />}
         </div>
         <div id="programs" className='pt-10'>
           <h2 className='text-center text-2xl mb-10'>PROGRAMS</h2>
           <div className='flex justify-center mb-20'>
-            {/* {<BeginnerProgramme beginnerProgram={programmes.beginnerProgram}/>} */}
+            {<BeginnerProgramme />}
           </div>
           <div className='flex flex-col lg:flex-row justify-center'>
-          {/* {programmes.programs.map(program => {
-            return ( */}
-              <Programme programmes={programmes}/>
-            {/* )
-          })} */}
+            <Programme />
           </div>
         </div>
         <div className='lg:m-auto mx-10 py-10 lg:py-16 lg:w-2/3'>
