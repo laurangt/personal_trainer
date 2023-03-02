@@ -1,9 +1,8 @@
 import React, {useState} from 'react'
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
-import { faHourglass2 } from '@fortawesome/free-regular-svg-icons';
 
 function PaypalCheckout() {
-  const amount = "2";
+  const amount = "10";
   const description = "Program1"
   const currency = "USD";
   // const style = {"layout":"vertical"};
@@ -20,8 +19,8 @@ function PaypalCheckout() {
                 {
                   description: description,
                   amount: {
-                      currency_code: "USD",
-                      value: 20,
+                      currency_code: currency,
+                      value: amount,
                   },
                 },
             ],
@@ -37,7 +36,7 @@ function PaypalCheckout() {
 
   const onApprove = (data, actions)  => {
     return actions.order.capture().then(function (details) {
-      const {payer} = details;
+      // const {payer} = details;
       setSuccess(true)
       // alert("Transaction completed by " + details.payer.name.given_name)
     });

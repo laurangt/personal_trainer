@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import BookButton from './BookButton'
 
 function Coaching(props) {
-console.log(props)
+// console.log(props)
 const onlineCoaching = props.onlineCoaching
   return (
     <div className='text-white lg:mx-auto py-10 lg:py-16 w-full xl:w-2/5 bg-coaching-blue lg:border-x-4 lg:border-r-white'>
