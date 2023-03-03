@@ -32,12 +32,12 @@ function Coaching() {
               <p>FOR {coaching.duration}</p>
               <p>{coaching.price}€</p>
             </div>
-            <ul className='leading-10 mb-10'>
-              {/* {coaching.description.map((item, index) => {
+            <ul className='leading-10 mb-10 list-disc '>
+              {coaching.descriptions.split(",").map((item, index) => {
                 return (
                   <li key={index}>{item}</li>
                 )
-              })} */}
+              })}
             </ul>
             <Link to={`program/${coaching.slug}`}>
               <BookButton />

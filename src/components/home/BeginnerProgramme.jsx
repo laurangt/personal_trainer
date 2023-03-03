@@ -32,7 +32,7 @@ function BeginnerProgramme() {
           </div>
           <ul className='list-disc mb-10'>
             <li>{bundleProgram.description}</li>
-            {/* <li>Videos for demonstration</li> */}
+            <li>Videos for demonstration</li>
           </ul>
           <Link to={`/program/${bundleProgram.slug}`}>
             <BookButton />
