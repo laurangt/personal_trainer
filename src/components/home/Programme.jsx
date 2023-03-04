@@ -40,7 +40,7 @@ function Programme(props) {
           <li>{program.duration} training plan</li>
           <li>{program.description}</li>
         </ul>
-        <Link to={`/program/${program.slug}`}>
+        <Link to={`/program/${program.slug}/`}>
           <BookButton />
         </Link>
       </div>

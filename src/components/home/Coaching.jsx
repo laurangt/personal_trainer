@@ -39,7 +39,7 @@ function Coaching() {
                 )
               })}
             </ul>
-            <Link to={`program/${coaching.slug}`}>
+            <Link to={`coaching/${coaching.slug}`}>
               <BookButton />
             </Link>
           </div>

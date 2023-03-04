@@ -3,27 +3,29 @@ import { useParams } from 'react-router-dom'
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
-function ProgramShow() {
+function CoachingShow() {
   const params = useParams();
   const {slug} = params;
 
-  const [programData, setProgramData] = useState([])
+  const [coachingData, setCoachingData] = useState([])
   useEffect(() => {
-    fetch(`http://localhost:3000/api/v1/programmes/${slug}`)
+    fetch(`http://localhost:3000/api/v1/coachings/${slug}`)
       .then((response) => response.json())
       .then((data) => {
-        setProgramData(data)
+        setCoachingData(data)
       });
   }, [])
-  console.log(programData)
+  console.log(coachingData)
 
   return (
     <div>
       <Navbar />
-      <h1>{programData.duration}</h1>
+      <div>
+        <h1>{coachingData.name}</h1>
+      </div>
       <Footer/>
     </div>
   )
 }
 
-export default ProgramShow
+export default CoachingShow
