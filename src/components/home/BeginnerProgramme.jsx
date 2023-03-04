@@ -34,7 +34,7 @@ function BeginnerProgramme() {
             <li>{bundleProgram.description}</li>
             <li>Videos for demonstration</li>
           </ul>
-          <Link to={`/program/${bundleProgram.slug}`}>
+          <Link to={`/bundle/${bundleProgram.slug}`}>
             <BookButton />
           </Link>
           <p className='absolute -rotate-45 bg-coaching-blue text-yellow lg:text-2xl font-bold py-1 px-3 top-3 -left-10 lg:top-6 lg:-left-12'>BEST SELLER</p>

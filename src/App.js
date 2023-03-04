@@ -6,6 +6,8 @@ import Nutrition from './pages/Nutrition';
 import AboutMe from './pages/AboutMe';
 import PaypalCheckout from './pages/PaypalCheckout';
 import ProgramShow from './pages/ProgramShow';
+import BundleShow from './pages/BundleShow';
+import CoachingShow from './pages/CoachingShow';
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
         <Route exact path="/nutrition" element={<Nutrition />} />
         <Route exact path="/aboutme" element={<AboutMe />} />
         <Route exact path="/program/:slug" element={<ProgramShow />} />
+        <Route exact path="/bundle/:slug" element={<BundleShow />} />
+        <Route exact path="/coaching/:slug" element={<CoachingShow />} />
         <Route exact path="/checkout" element={<PaypalCheckout />} />
       </Routes>
     </Router>
