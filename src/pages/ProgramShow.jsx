@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import { useParams } from 'react-router-dom'
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 function ProgramShow() {
   const params = useParams();
@@ -17,7 +19,9 @@ function ProgramShow() {
 
   return (
     <div>
+      <Navbar />
       <h1>{programData.duration}</h1>
+      <Footer/>
     </div>
   )
 }
