@@ -14,7 +14,7 @@ function BundleShow() {
       .then((data) => {
         setBundleData(data)
       });
-  }, [])
+  }, [slug])
   console.log(bundleData)
 
   return (

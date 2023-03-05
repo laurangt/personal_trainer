@@ -14,7 +14,7 @@ function ProgramShow() {
       .then((data) => {
         setProgramData(data)
       });
-  }, [])
+  }, [slug])
   console.log(programData)
 
   return (

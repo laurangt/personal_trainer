@@ -14,7 +14,7 @@ function CoachingShow() {
       .then((data) => {
         setCoachingData(data)
       });
-  }, [])
+  }, [slug])
   console.log(coachingData)
 
   return (
