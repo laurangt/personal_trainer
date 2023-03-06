@@ -37,8 +37,12 @@ function Programme(props) {
           <p>{program.price} €</p>
         </div>
         <ul className='list-disc h-1/2 mb-10 lg:mb-0'>
-          <li>{program.duration} training plan</li>
-          <li>{program.description}</li>
+          <li>Train {program.duration}</li>
+          {program.description.split(",").map((item, index) => {
+            return (
+              <li key={index}>{item}</li>
+            )
+          })}
         </ul>
         <Link to={`/program/${program.slug}/`}>
           <BookButton />
