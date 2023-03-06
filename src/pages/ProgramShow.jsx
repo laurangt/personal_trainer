@@ -21,6 +21,7 @@ function ProgramShow() {
     <div>
       <Navbar />
       <h1>{programData.duration}</h1>
+      <p>{programData.fulldescription}</p>
       <Footer/>
     </div>
   )
