@@ -14,8 +14,7 @@ function CoachingShow() {
       .then((data) => {
         setCoachingData(data)
       });
-  }, [])
-  console.log(coachingData)
+  }, [slug])
 
   return (
     <div>

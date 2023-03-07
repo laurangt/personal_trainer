@@ -9,7 +9,7 @@ import Coaching from '../components/home/Coaching'
 import Programme from '../components/home/Programme'
 import FAQ from '../components/home/FAQ'
 import Contact from '../components/home/Contact'
-import BeginnerProgramme from '../components/home/BeginnerProgramme';
+import BundleProgrammeBeasts from '../components/home/BundleProgrammeBeasts';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleUp } from '@fortawesome/free-solid-svg-icons'
@@ -42,7 +42,7 @@ function Home() {
         <div id="programs" className='pt-10'>
           <h2 className='text-center text-2xl mb-10'>PROGRAMS</h2>
           <div className='flex justify-center mb-20'>
-            {<BeginnerProgramme />}
+            {<BundleProgrammeBeasts />}
           </div>
           <div className='flex flex-col lg:flex-row justify-center'>
             <Programme />

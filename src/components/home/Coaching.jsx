@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import BookButton from './BookButton'
+import { HashLink as Link } from 'react-router-hash-link';
 
 import axios from 'axios'
 
@@ -35,12 +36,12 @@ function Coaching() {
             <ul className='leading-10 mb-10 list-disc '>
               {coaching.descriptions.split(",").map((item, index) => {
                 return (
-                  <li key={index}>{item}</li>
+                  <li key={index} className="ml-10">{item}</li>
                 )
               })}
             </ul>
-            <Link to={`coaching/${coaching.slug}`}>
-              <BookButton />
+            <Link to="/#contact">
+              <BookButton text="Get in touch"/>
             </Link>
           </div>
         </div>
