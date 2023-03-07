@@ -33,7 +33,7 @@ function BundleProgrammeBeasts() {
             <p>3-in-1 programs:</p>
             {bundleProgram.description.split(",").map((item, index) => {
               return (
-                <li key={index} className="ml-10">{item}</li>
+                <li key={index} className="sm:ml-10">{item}</li>
               )
             })}
           </ul>

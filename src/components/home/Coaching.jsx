@@ -36,7 +36,7 @@ function Coaching() {
             <ul className='leading-10 mb-10 list-disc '>
               {coaching.descriptions.split(",").map((item, index) => {
                 return (
-                  <li key={index} className="ml-10">{item}</li>
+                  <li key={index} className="sm:ml-10">{item}</li>
                 )
               })}
             </ul>
