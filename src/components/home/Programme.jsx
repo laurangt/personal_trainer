@@ -37,15 +37,15 @@ function Programme(props) {
           <p>{program.price} €</p>
         </div>
         <ul className='list-disc h-1/2 mb-10 lg:mb-0'>
-          <li>Train {program.duration}</li>
+          <li className="ml-10">Train {program.duration}</li>
           {program.description.split(",").map((item, index) => {
             return (
-              <li key={index}>{item}</li>
+              <li key={index} className="ml-10">{item}</li>
             )
           })}
         </ul>
         <Link to={`/program/${program.slug}/`}>
-          <BookButton />
+          <BookButton text="Book now"/>
         </Link>
       </div>
       )

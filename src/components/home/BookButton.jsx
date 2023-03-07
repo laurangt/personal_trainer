@@ -1,9 +1,9 @@
 import React from 'react'
 
-function BookButton() {
+function BookButton(props) {
   return (
     <button className="text-xl font-bold lg:mb-16 border bg-yellow text-black w-52 h-14 rounded-lg flex m-auto justify-center items-center">
-      <p>Book now</p>
+      <p>{props.text}</p>
     </button>
   )
 }

@@ -15,7 +15,6 @@ function CoachingShow() {
         setCoachingData(data)
       });
   }, [slug])
-  console.log(coachingData)
 
   return (
     <div>
