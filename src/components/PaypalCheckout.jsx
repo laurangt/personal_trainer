@@ -82,8 +82,10 @@ function PaypalCheckout(props) {
           "client-id": process.env.REACT_APP_CLIENT_ID
         }}
       >
-        <h1 className='lg:text-red-700'>1x {props.itemSelling}</h1>
-        <span>Total price: {props.price}€</span>
+        <div className='flex justify-between mb-3'>
+          <h1 className='lg:text-red-700'>1x {props.itemSelling}</h1>
+          <span>Total price: {props.price}€</span>
+        </div>
         {/* <button onClick={() => setShow(true) } type="submit">Buy now</button> */}
 
         {/* {show ? (
