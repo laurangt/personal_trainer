@@ -17,7 +17,9 @@ function Intro(props) {
       <div className='flex flex-col lg:flex-row'>
         {props.location === 'left' ?
         <>{text}{img}</> :
-        <>{img}{text}</>
+        <div className='flex flex-col-reverse lg:flex-row'>
+          {img}{text}
+        </div>
         }
       </div>
     </div>

@@ -40,7 +40,7 @@ function Home() {
           {<Coaching />}
         </div>
         <div id="programs" className='pt-10'>
-          <h2 className='text-center text-2xl mb-10'>PROGRAMS</h2>
+          <h2 className='text-center font-bold text-2xl mb-10'>PROGRAMS</h2>
           <div className='flex justify-center mb-20'>
             {<BundleProgrammeBeasts />}
           </div>
@@ -49,7 +49,7 @@ function Home() {
           </div>
         </div>
         <div className='lg:m-auto mx-10 py-10 lg:py-16 lg:w-2/3'>
-          <h2 className='mb-10 text-2xl text-center'>FREQUENTLY ASKED QUESTIONS</h2>
+          <h2 className='mb-10 text-2xl font-bold text-center'>FREQUENTLY ASKED QUESTIONS</h2>
           <FAQ
             question="I struggle to be consistent with my training and nutrition, what can I do?"
             answer="Consistency is key to get results and maintain them long term. The most important thing in order to be consistent is to enjoy what you do. Forcing yourself to eat or do things you don't like will not cut it. I will help you find your own way to reach your goals while enjoying what you do."
