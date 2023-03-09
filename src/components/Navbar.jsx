@@ -13,12 +13,12 @@ function Navbar() {
 
     const fullNav = <>
       <div className='lg:text-xl text-white'>
-        <NavLink to="/" className='pl-10'>Home</NavLink>
-        <Link to="/#1on1coaching" className='pl-10'>Coaching</Link>
-        <Link to="/#programs" className='pl-10'>Programs</Link>
-        <NavLink to="/nutrition" className='pl-10'>Nutrition</NavLink>
-        <NavLink to="/aboutme" className='pl-10'>About me</NavLink>
-        <Link to="/#contact" className='pl-10'>Contact me</Link>
+        <NavLink to="/" className='pl-10 hover:font-bold'>Home</NavLink>
+        <Link to="/#1on1coaching" className='pl-10 hover:font-bold'>Coaching</Link>
+        <Link to="/#programs" className='pl-10 hover:font-bold'>Programs</Link>
+        <NavLink to="/nutrition" className='pl-10 hover:font-bold'>Nutrition</NavLink>
+        <NavLink to="/aboutme" className='pl-10 hover:font-bold'>About me</NavLink>
+        <Link to="/#contact" className='pl-10 hover:font-bold'>Contact me</Link>
       </div>
     </>
 
@@ -27,22 +27,22 @@ function Navbar() {
         <button onClick={handleOpen}>{open ? <FontAwesomeIcon icon={faXmark} /> : <FontAwesomeIcon icon={faBars} />}</button>
         {open ? (
           <ul className="text-white divide-y">
-            <li>
+            <li className='hover:font-bold'>
               <NavLink to="/">Home</NavLink>
             </li>
-            <li>
+            <li className='hover:font-bold'>
               <Link to="/#1on1coaching">Coaching</Link>
             </li>
-            <li>
+            <li className='hover:font-bold'>
             <Link to="/#programs">Programs</Link>
             </li>
-            <li>
+            <li className='hover:font-bold'>
               <NavLink to="/nutrition">Nutrition</NavLink>
             </li>
-            <li>
+            <li className='hover:font-bold'>
               <NavLink to="/aboutme">About me</NavLink>
             </li>
-            <li>
+            <li className='hover:font-bold'>
             <Link to="/#contact">Contact me</Link>
             </li>
           </ul>

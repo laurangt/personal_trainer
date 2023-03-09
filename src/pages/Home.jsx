@@ -28,13 +28,18 @@ function Home() {
         description="Trainer with kettlebells"
         title="Online Personal Training"
         text="You decided to take your fitness journey seriously and want some help? Whether your goal is to build muscle, lose weight or just finding that healthy routine again, I can get you on track."
-        extratext="My goal is to help you become autonomous so that you can continue your personal journey without me and become the best version of yourself."
+        extratext="My goal is to help you become autonomous so that you can continue your personal journey without me and become the best version of yourself. "
+        link="Start here!"
+        pathname="/#1on1coaching"
       />
       <Intro
         img={introFood}
         description="healthy food"
         title="Nutrition"
-        text="Fitness is a combination of training and nutrition. Both deserve your attention on your self improvement journey. Although this can be a complex topic the basics are really simple and if you're honest with yourself most of the time you know what you should and shouldn't eat. I'll make nutrition the easiest part for you but if you still want to have a more detailed look into it click here."
+        text="Fitness is a combination of training and nutrition. Both deserve your attention on your self improvement journey. Although this can be a complex topic the basics are really simple and if you're honest with yourself most of the time you know what you should and shouldn't eat."
+        extratext="I'll make nutrition the easiest part for you but if you still want to have a more detailed look into it, "
+        link="click here!"
+        pathname="/nutrition"
       />
         <div id="1on1coaching" className='bg-coaching-blue'>
           {<Coaching />}

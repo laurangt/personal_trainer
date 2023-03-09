@@ -26,7 +26,7 @@ function Contact() {
     <section className="bg-programme-blue">
       <div className="mx-8 lg:mx-auto py-10 lg:py-16 lg:w-1/2">
           <h2 className="mb-8 lg:mx-40 text-2xl font-bold text-center text-white">Contact Me</h2>
-          <p className="mb-8 font-light lg:text-xl text-justify text-white">Do you have further questions about any of the program or 1-1 coaching? Is there anything else you want to ask me? Feel free to fill out this contact form.</p>
+          <p className="mb-8 font-light lg:text-xl text-justify text-white">Do you have further questions about any of the programs or 1-1 coaching? Is there anything else you want to ask me? Feel free to fill out this contact form.</p>
           <form ref={form} onSubmit={sendEmail} className="space-y-8">
               <div>
                   <label htmlFor="name" className="block mb-2 font-medium text-white">Name</label>

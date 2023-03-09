@@ -31,20 +31,20 @@ function BundleProgrammeBeasts() {
               <p className='line-through lg:mr-2 mr-5'>149.97€</p>
               <p>{bundleProgram.price}€</p>
             </div>
-            <p>Save 25%!</p>
+            <p>Save 20%!</p>
           </div>
           <ul className='list-disc mb-10'>
-            <p>3-in-1 programs:</p>
+            <p className='text-lg'>3-in-1 programs:</p>
             {bundleProgram.description.split(",").map((item, index) => {
               return (
-                <li key={index} className="sm:ml-10">{item}</li>
+                <li key={index} className="sm:ml-10 text-lg">{item}</li>
               )
             })}
           </ul>
           <Link to={`/bundle/${bundleProgram.slug}`}>
-            <BookButton text="Book now"/>
+            <BookButton text="Get it now"/>
           </Link>
-          <p className='absolute -rotate-45 bg-coaching-blue text-yellow lg:text-2xl font-bold py-1 px-3 top-3 -left-10 lg:top-6 lg:-left-12'>BEST SELLER</p>
+          {/* <p className='absolute -rotate-45 bg-coaching-blue text-yellow lg:text-2xl font-bold py-1 px-3 top-3 -left-10 lg:top-6 lg:-left-12'>BEST SELLER</p> */}
         </div>
       )
     })}

@@ -29,10 +29,10 @@ function Coaching() {
         <div key={coaching.id} className='text-white lg:mx-auto py-10 lg:py-16 w-full xl:w-2/5 bg-coaching-blue lg:border-x-4 lg:border-r-white'>
           <div className='md:w-1/2 m-auto px-10 lg:px-0'>
             <h2 className='text-center font-bold text-2xl mb-16'>{coaching.name}</h2>
-            <div className='flex justify-between font-bold text-xl'>
-              <p>FOR {coaching.duration}</p>
-              <p>{coaching.price}€</p>
-            </div>
+            {/* <div className='flex justify-between font-bold text-xl'> */}
+              {/* <p>FOR {coaching.duration}</p> */}
+              {/* <p>{coaching.price}€</p> */}
+            {/* </div> */}
             <ul className='leading-10 mb-10 list-disc '>
               {coaching.descriptions.split(",").map((item, index) => {
                 return (
@@ -41,7 +41,7 @@ function Coaching() {
               })}
             </ul>
             <Link to="/#contact">
-              <BookButton text="Get in touch"/>
+              <BookButton text="Apply now"/>
             </Link>
           </div>
         </div>
