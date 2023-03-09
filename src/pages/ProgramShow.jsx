@@ -49,7 +49,8 @@ function ProgramShow() {
           </div>
         </div>
         <p className='mb-20'>You will get an email with the programme and will be able to access the video demonstrations through dropbox. A dropbox link will be included in the email through which you can watch and download the videos.</p>
-        <p className='font-bold text-2xl mb-3'>Other programs</p>
+        <hr className='h-1 mt-32 mb-16 bg-programme-blue'/>
+        <p className='font-bold text-2xl mb-8'>More programs</p>
         <OtherProgrammes currentSlug={programData.slug} />
       </div>
       <Footer/>
