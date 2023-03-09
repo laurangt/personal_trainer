@@ -7,7 +7,7 @@ function PaypalCheckout(props) {
   const currency = "USD";
   // const style = {"layout":"vertical"};
 
-  // const [show, setShow] = useState(false);
+  const [show, setShow] = useState(false);
   const [success, setSuccess] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const [orderID, setOrderID] = useState(false);

@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import PaypalCheckout from '../components/PaypalCheckout';
+import OtherProgrammes from '../components/OtherProgrammes'
 
 function ProgramShow() {
   const params = useParams();
@@ -25,8 +26,8 @@ function ProgramShow() {
           <h2 className='font-bold'>{programData.name}</h2>
           <p>{programData.price}€</p>
         </div>
-        <div className='flex'>
-          <div className='w-2/3 mr-20'>
+        <div className='lg:flex'>
+          <div className='lg:w-2/3 lg:mr-20'>
             <p className='mb-5'>{programData.fulldescription}</p>
             <p>What you need and what's included?</p>
             <ul className='list-disc h-1/2 mb-10'>
@@ -39,7 +40,7 @@ function ProgramShow() {
               <li className="sm:ml-10">Explanation on how to execute each exercise</li>
             </ul>
           </div>
-          <div className='w-1/3'>
+          <div className='lg:w-1/3'>
             <p>Complete your purchase now:</p>
             <PaypalCheckout
               price={programData.price}
@@ -47,7 +48,9 @@ function ProgramShow() {
             />
           </div>
         </div>
-          <p>You will get an email with the programme and will be able to access the video demonstrations through dropbox. A dropbox link will be included in the email through which you can watch and download the videos.</p>
+        <p className='mb-20'>You will get an email with the programme and will be able to access the video demonstrations through dropbox. A dropbox link will be included in the email through which you can watch and download the videos.</p>
+        <p className='font-bold text-2xl mb-3'>Other programs</p>
+        <OtherProgrammes currentSlug={programData.slug} />
       </div>
       <Footer/>
     </div>

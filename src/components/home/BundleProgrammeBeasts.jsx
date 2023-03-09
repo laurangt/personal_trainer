@@ -37,7 +37,7 @@ function BundleProgrammeBeasts() {
               )
             })}
           </ul>
-          <p>Save almost 25%!</p>
+          <p>Save 25%!</p>
           <Link to={`/bundle/${bundleProgram.slug}`}>
             <BookButton text="Book now"/>
           </Link>
