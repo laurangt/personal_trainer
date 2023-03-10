@@ -40,7 +40,7 @@ function Contact() {
                   <label htmlFor="message" className="block mb-2 font-medium text-white">Your message</label>
                   <textarea name="message" rows="6" className="block p-2.5 w-full bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 " placeholder="Leave your enquiry..."></textarea>
               </div>
-              <button type="submit" className="py-3 px-5 font-bold text-center rounded-lg bg-yellow sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300">Send message</button>
+              <button type="submit" className="hover:font-bold py-3 px-5  text-center rounded-lg bg-yellow sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300">Send message</button>
           </form>
       </div>
     </section>
