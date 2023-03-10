@@ -24,7 +24,7 @@ function OtherProgrammes(props) {
   return (<div className='lg:flex'>
     {otherProgrammes.map((program)=> {
       if (program.slug === props.currentSlug) {
-        return <></>
+        return <div key={program.id}></div>
       } else {
         return (
         <div key={program.id} className='bg-programme-blue text-white px-3 lg:px-8 py-5 lg:py-8 border-b-4 lg:border-r-4 lg:border-white'>
