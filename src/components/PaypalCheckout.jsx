@@ -79,8 +79,8 @@ function PaypalCheckout(props) {
           "client-id": process.env.REACT_APP_CLIENT_ID
         }}
       >
-        <div className='flex justify-between mb-3'>
-          <h1 className='lg:text-red-700'>1x {props.itemSelling}</h1>
+        <div className='flex justify-between mb-3 lg:flex-col'>
+          <li>1x {props.itemSelling}</li>
           <span>Total price: {props.price}€</span>
         </div>
         {/* if onclick only display paypal: */}
@@ -100,16 +100,16 @@ function PaypalCheckout(props) {
           onApprove={onApprove}
           onError={onError}
         /> */}
+        <div className='text-center'>
+          {success ? (
+            <h1>Your Payment has been done successfully please check email</h1>
+          ) : null}
 
-        {success ? (
-          <h1>Your Payment has been done successfully please check email</h1>
-        ) : null}
-
-        <ButtonWrapper
-          currency={currency}
-          showSpinner={false}
-        />
-
+          <ButtonWrapper
+            currency={currency}
+            showSpinner={false}
+          />
+        </div>
       </PayPalScriptProvider>
     </div>
   )

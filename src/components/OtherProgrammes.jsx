@@ -27,12 +27,12 @@ function OtherProgrammes(props) {
         return <div key={program.id}></div>
       } else {
         return (
-        <div key={program.id} className='bg-programme-blue text-white px-3 lg:px-8 py-5 lg:py-8 border-b-4 border-r-4 lg:border-white rounded-lg'>
-          <div className='text-center text-xl font-bold lg:mb-8 min-w-max'>
+        <div key={program.id} className='bg-programme-blue text-white p-8 mb-5 border-b-4 border-r-4 border-white rounded-lg'>
+          <div className='text-center text-xl font-bold mb-10 min-w-max'>
             <h2>{program.name.toUpperCase()}</h2>
             <p>{program.price} €</p>
           </div>
-          <ul className='list-disc h-1/2 mb-10 lg:mb-0'>
+          <ul className='list-disc h-1/2 mb-5 lg:mb-0'>
             <li>Train {program.duration}</li>
             {program.description.split(",").map((item, index) => {
               return (
