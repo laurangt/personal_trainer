@@ -21,22 +21,22 @@ function OtherProgrammes(props) {
   }, [])
 
 
-  return (<div className='lg:flex'>
+  return (<div className='flex overflow-x-scroll'>
     {otherProgrammes.map((program)=> {
       if (program.slug === props.currentSlug) {
         return <div key={program.id}></div>
       } else {
         return (
-        <div key={program.id} className='bg-programme-blue text-white px-3 lg:px-8 py-5 lg:py-8 border-b-4 lg:border-r-4 lg:border-white'>
-          <div className='text-center text-xl font-bold lg:mb-8'>
-            <h2 >{program.name.toUpperCase()}</h2>
+        <div key={program.id} className='bg-programme-blue text-white px-3 lg:px-8 py-5 lg:py-8 border-b-4 border-r-4 lg:border-white rounded-lg'>
+          <div className='text-center text-xl font-bold lg:mb-8 min-w-max'>
+            <h2>{program.name.toUpperCase()}</h2>
             <p>{program.price} €</p>
           </div>
           <ul className='list-disc h-1/2 mb-10 lg:mb-0'>
-            <li className="ml-10">Train {program.duration}</li>
+            <li>Train {program.duration}</li>
             {program.description.split(",").map((item, index) => {
               return (
-                <li key={index} className="ml-10">{item}</li>
+                <li key={index}>{item}</li>
               )
             })}
           </ul>

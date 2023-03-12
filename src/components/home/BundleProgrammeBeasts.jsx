@@ -24,7 +24,7 @@ function BundleProgrammeBeasts() {
   return (<>
     {bundlePrograms.map((bundleProgram) => {
       return (
-        <div key={bundleProgram.id} className='text-white w-4/5 pb-10 lg:pb-0 xl:w-2/5 px-10 sm:px-32 bg-programme-blue relative'>
+        <div key={bundleProgram.id} className='text-white w-4/5 pb-10 lg:pb-0 xl:w-2/5 px-10 sm:px-32 bg-programme-blue relative rounded-lg'>
           <h2 className='text-center pt-10 lg:pt-16 text-xl font-bold mb-10'>{bundleProgram.name.toUpperCase()}</h2>
           <div className='flex justify-between font-bold text-xl'>
             <div className='flex'>

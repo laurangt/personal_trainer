@@ -31,16 +31,16 @@ function Programme(props) {
   return (<>
     {programmes.map((program)=> {
       return (
-      <div key={program.id} style={styles} className='text-white w-full xl:w-1/3 px-8 lg:px-16 py-10 lg:py-16 lg:mb-10 border-b-4 lg:border-r-4 lg:border-white'>
-        <div className='text-center text-xl font-bold lg:mb-16'>
-          <h2 >{program.name.toUpperCase()}</h2>
+      <div key={program.id} style={styles} className='text-white w-full p-16 mb-10 border-b-4 border-r-4 border-white rounded-lg'>
+        <div className='text-center text-xl font-bold mb-10 min-w-max'>
+          <h2>{program.name.toUpperCase()}</h2>
           <p>{program.price} €</p>
         </div>
-        <ul className='list-disc h-1/2 mb-10 lg:mb-0'>
-          <li className="ml-10 text-lg">Train {program.duration}</li>
+        <ul className='list-disc h-1/2 lg:mb-0 mb-5'>
+          <li className="text-lg">Train {program.duration}</li>
           {program.description.split(",").map((item, index) => {
             return (
-              <li key={index} className="ml-10 text-lg">{item}</li>
+              <li key={index} className="text-lg">{item}</li>
             )
           })}
         </ul>

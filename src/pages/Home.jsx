@@ -49,7 +49,9 @@ function Home() {
           <div className='flex justify-center mb-20'>
             {<BundleProgrammeBeasts />}
           </div>
-          <div className='flex flex-col lg:flex-row lg:flex-wrap justify-center'>
+          <div className='flex overflow-x-scroll '>
+          {/* <div className='flex flex-col lg:flex-row lg:overflow-x-scroll overflow-y-scroll'> */}
+          {/* div className='flex-col lg:flex-row lg:flex-wrap justify-center' */}
             <Programme />
           </div>
         </div>
