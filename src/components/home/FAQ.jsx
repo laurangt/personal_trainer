@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect, useCallback} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDown, faXmark } from '@fortawesome/free-solid-svg-icons'
 
@@ -27,9 +27,38 @@ function FAQ(props) {
         {open ? fullFAQ : questionsOnly}
         <button className='self-start	ml-5' onClick={handleOpen}>{open ? <FontAwesomeIcon icon={faXmark} /> : <FontAwesomeIcon icon={faAngleDown} />}</button>
       </div>
+
+const useMediaQuery = (width) => {
+  const [targetReached, setTargetReached] = useState(false);
+
+  const updateTarget = useCallback((e) => {
+    if (e.matches) {
+      setTargetReached(true);
+    } else {
+      setTargetReached(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    const media = window.matchMedia(`(max-width: ${width}px)`);
+    media.addListener(updateTarget);
+
+    // Check on mount (callback is not called until a change occurs)
+    if (media.matches) {
+      setTargetReached(true);
+    }
+
+    return () => media.removeListener(updateTarget);
+  }, []);
+
+  return targetReached;
+};
+
+const isBreakpoint = useMediaQuery(768)
+
     return (
       <>
-        {window.innerWidth > 768 ? fullFAQ : dropdownFAQ}
+        {isBreakpoint ? dropdownFAQ : fullFAQ}
       </>
   )
 }

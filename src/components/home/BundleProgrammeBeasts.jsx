@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import BookButton from './BookButton'
 import axios from 'axios'
-import PaypalCheckout from '../PaypalCheckout'
 
 function BundleProgrammeBeasts() {
   const [bundlePrograms, setBundlePrograms] = useState([])
