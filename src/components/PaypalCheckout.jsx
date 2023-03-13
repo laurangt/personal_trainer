@@ -9,6 +9,7 @@ function PaypalCheckout(props) {
 
   // const [show, setShow] = useState(false);
   const [success, setSuccess] = useState(false);
+  // eslint-disable-next-line
   const [errorMessage, setErrorMessage] = useState("");
   const [orderID, setOrderID] = useState(false);
 
@@ -57,6 +58,7 @@ function PaypalCheckout(props) {
             currency: currency,
           },
       });
+      // eslint-disable-next-line
     }, [currency, showSpinner]);
 
 

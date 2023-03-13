@@ -71,7 +71,7 @@ const useMediaQuery = (width) => {
     }
 
     return () => media.removeListener(updateTarget);
-  }, []);
+  }, [updateTarget, width]);
 
   return targetReached;
 };
