@@ -38,7 +38,7 @@ function CoachingShow() {
             </ul>
           </div>
           <div className='lg:w-2/3 text-center'>
-            <p className=''>Complete your payment and let  your fitness journey begin!</p>
+            <p className='font-bold'>Let  your fitness journey begin!</p>
             <PaypalCheckout
               price={coachingData.price}
               itemSelling={coachingData.name}
