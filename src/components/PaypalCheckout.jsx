@@ -1,5 +1,5 @@
-import React, {useState} from 'react'
-import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
+import React, {useState, useEffect} from 'react'
+import { PayPalScriptProvider, PayPalButtons, usePayPalScriptReducer } from "@paypal/react-paypal-js";
 
 function PaypalCheckout(props) {
   const amount = props.price;
@@ -7,7 +7,7 @@ function PaypalCheckout(props) {
   const currency = "USD";
   // const style = {"layout":"vertical"};
 
-  // const [show, setShow] = useState(false);
+  const [show, setShow] = useState(false);
   const [success, setSuccess] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const [orderID, setOrderID] = useState(false);
@@ -46,34 +46,31 @@ function PaypalCheckout(props) {
     setErrorMessage("An error occured with your payment");
   }
 
-  // const ButtonWrapper = ({ currency, showSpinner }) => {
-  //   const [{ options, isPending }, dispatch] = usePayPalScriptReducer();
+  const ButtonWrapper = ({ currency, showSpinner }) => {
+    const [{ options, isPending }, dispatch] = usePayPalScriptReducer();
 
-  //   useEffect(() => {
-  //     dispatch({
-  //         type: "resetOptions",
-  //         value: {
-  //           ...options,
-  //           currency: currency,
-  //         },
-  //     });
-  //   }, [currency, showSpinner]);
+    useEffect(() => {
+      dispatch({
+          type: "resetOptions",
+          value: {
+            ...options,
+            currency: currency,
+          },
+      });
+    }, [currency, showSpinner]);
 
 
-  //   return (<>
-  //     { (showSpinner && isPending) && <div className="spinner" /> }
-  //     <PayPalButtons
-  //         disabled={false}
-  //         forceReRender={[amount, currency, style]}
-  //         fundingSource={undefined}
-  //         style={{layout: "vertical"}}
-  //         createOrder={createOrder}
-  //         onApprove={onApprove}
-  //         onError={onError}
-  //       />
-  //     </>
-  //   );
-  // }
+    return (<>
+      { (showSpinner && isPending) && <div className="spinner" /> }
+        <PayPalButtons
+          style={{layout: "vertical"}}
+          createOrder={createOrder}
+          onApprove={onApprove}
+          onError={onError}
+        />
+      </>
+    );
+  }
 
   return (
     <div>
@@ -82,12 +79,12 @@ function PaypalCheckout(props) {
           "client-id": process.env.REACT_APP_CLIENT_ID
         }}
       >
-        <div className='flex justify-between mb-3'>
-          <h1 className='lg:text-red-700'>1x {props.itemSelling}</h1>
+        <div className='flex justify-between mb-3 lg:flex-col'>
+          <li>1x {props.itemSelling}</li>
           <span>Total price: {props.price}€</span>
         </div>
+        {/* if onclick only display paypal: */}
         {/* <button onClick={() => setShow(true) } type="submit">Buy now</button> */}
-
         {/* {show ? (
           <PayPalButtons
             style={{layout: "vertical"}}
@@ -97,23 +94,22 @@ function PaypalCheckout(props) {
           />
         ) : null} */}
 
-        <PayPalButtons
+        {/* <PayPalButtons
           style={{layout: "vertical"}}
           createOrder={createOrder}
           onApprove={onApprove}
           onError={onError}
-        />
+        /> */}
+        <div className='text-center'>
+          {success ? (
+            <h1>Your Payment has been done successfully please check email</h1>
+          ) : null}
 
-        {success ? (
-          <h1>Your Payment has been done successfully please check email</h1>
-        ) : null}
-
-        {/* <ButtonWrapper
-          currency={currency}
-          showSpinner={false}
-        />
-        <button type="submit" onClick={() => setShow(true)} className='bg-black text-white p-5'>Buy now</button> */}
-
+          <ButtonWrapper
+            currency={currency}
+            showSpinner={false}
+          />
+        </div>
       </PayPalScriptProvider>
     </div>
   )

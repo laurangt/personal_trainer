@@ -26,22 +26,19 @@ function Coaching() {
   return (<>
     {coachings.map((coaching) => {
       return (
-        <div key={coaching.id} className='text-white lg:mx-auto py-10 lg:py-16 w-full xl:w-2/5 bg-coaching-blue lg:border-x-4 lg:border-r-white'>
-          <div className='md:w-1/2 m-auto px-10 lg:px-0'>
-            <h2 className='text-center font-bold text-2xl mb-16'>{coaching.name}</h2>
-            <div className='flex justify-between font-bold text-xl'>
-              <p>FOR {coaching.duration}</p>
-              <p>{coaching.price}€</p>
-            </div>
-            <ul className='leading-10 mb-10 list-disc '>
+        <div key={coaching.id} className='text-white text-lg lg:mx-auto py-10 lg:py-16 w-full xl:w-2/5 bg-coaching-blue lg:border-x-4 lg:border-r-white'>
+          <div className='lg:mx-20 mx-10'>
+            <h2 className='text-center font-bold text-2xl mb-8'>{coaching.name}</h2>
+            <p className='mb-8'>Benefit from a 1-on-1 coaching with me where I'll be directly in touch with you during your fitness journey. My coaching will be adapted to you individually in order to get the best results. Contact me by applying for a FREE call first.</p>
+            <ul className='leading-10 mb-10 list-disc'>
               {coaching.descriptions.split(",").map((item, index) => {
                 return (
-                  <li key={index} className="sm:ml-10">{item}</li>
+                  <li key={index} className="ml-10">{item}</li>
                 )
               })}
             </ul>
             <Link to="/#contact">
-              <BookButton text="Get in touch"/>
+              <BookButton text="Apply now"/>
             </Link>
           </div>
         </div>
